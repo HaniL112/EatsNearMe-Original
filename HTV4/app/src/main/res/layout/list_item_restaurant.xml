@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    android:layout_marginTop="10dp">
+
+    <ImageView
+        android:id="@+id/restaurant_image"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/restaurant_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/restaurant_name"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:padding="1dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginHorizontal="20dp"
+        android:text="Restaurant Name"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/restaurant_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/restaurant_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="Restaurant Description"
+        app:layout_constraintTop_toBottomOf="@+id/restaurant_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/restaurant_price_range"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:padding="1dp"
+        android:layout_marginLeft="20dp"
+        android:text="$$$"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restaurant_description" />
+
+    <TextView
+        android:id="@+id/restaurant_rating"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:padding="1dp"
+        android:layout_marginRight="20dp"
+        android:text="Rating: 4.5/5"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restaurant_description" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/restaurant_rating"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="93dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="20dp"
+        android:layout_height="15dp"
+        app:layout_constraintRight_toLeftOf="@+id/restaurant_rating"
+        app:layout_constraintTop_toBottomOf="@+id/restaurant_description"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+</android.support.constraint.ConstraintLayout>
